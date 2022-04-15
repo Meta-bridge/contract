@@ -27,7 +27,7 @@ interface IERC20 {
         address recipient,
         uint256 amount
     ) external returns (bool);
-K
+
     event Transfer(address indexed from, address indexed to, uint256 value);
 
     event Approval(address indexed owner, address indexed spender, uint256 value);
@@ -223,7 +223,6 @@ contract Ownable is Context {
     function _transferOwnership(address newOwner) internal virtual {
         address oldOwner = _owner;
         _owner = newOwner;
-
 
         emit OwnershipTransferred(oldOwner, newOwner);
     }
